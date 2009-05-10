@@ -11,11 +11,11 @@ import com.google.gwt.user.client.ui.Widget;
  * @author samangiahi
  *
  */
-public class CodeMirrorToolbarPanel extends HorizontalPanel implements Constants{
+public class CodeMirrorToolbar extends HorizontalPanel implements Constants{
 	
 	CodeMirrorEditorWidget widget;
 	
-	public CodeMirrorToolbarPanel(CodeMirrorEditorWidget widget) {
+	public CodeMirrorToolbar(CodeMirrorEditorWidget widget) {
 		this.widget = widget;
 		setSize("70px", "30");
 		prepareButtons();

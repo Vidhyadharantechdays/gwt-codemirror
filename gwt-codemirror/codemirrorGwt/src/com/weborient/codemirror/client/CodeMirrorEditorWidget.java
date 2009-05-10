@@ -57,7 +57,7 @@ public class CodeMirrorEditorWidget extends Composite implements Constants {
 			codeMirrorJSNI = new CodeMirrorJSNI();
 		}
 		
-		toolbar.add(new CodeMirrorToolbarPanel(this));
+		toolbar.add(new CodeMirrorToolbar(this));
 	}
 
 	public TextArea getTextArea() {
