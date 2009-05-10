@@ -1,4 +1,4 @@
-<project name="codemirror">
+<project name="codemirror" default="mirror-lib">
 	<target name="mirror-lib" description="codemirror">
 		<mkdir dir="build"/>
 		<jar destfile="build/codemirror-V0.2.jar">
