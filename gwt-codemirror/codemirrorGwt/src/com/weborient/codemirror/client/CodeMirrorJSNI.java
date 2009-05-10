@@ -26,7 +26,7 @@ public class CodeMirrorJSNI {
 	            var tr = conf.@com.weborient.codemirror.client.CodeMirrorConfiguration::isTextWrapping()();
 	            var su = conf.@com.weborient.codemirror.client.CodeMirrorConfiguration::getStyleUrl()();
 
-	            var editor = $wnd.CodeMirror.fromTextArea('code', {
+	            var editor = $wnd.CodeMirror.fromTextArea(@com.weborient.codemirror.client.Constants::TEXT_AREA_ID, {
 	                height:             h,
 	                parserfile: "parsexml.js",
 	                stylesheet: su,

@@ -5,6 +5,8 @@ package com.weborient.codemirror.client;
  *
  */
 public interface Constants {
+	
+	// ICONS
 	public final static String TOOLBAR_UNDO_BUTTON_ICON = "images/toolbar_undo_button.png"; 
 	public final static String UNDO_BUTTON_HOVER_ICON = "images/undo_button_hover.png";
 	
@@ -14,4 +16,10 @@ public interface Constants {
 	public final static String TOOLBAR_REDO_BUTTON_ICON = "images/toolbar_redo_button.png";
 	public final static String REDO_BUTTON_HOVER_ICON = "images/redo_button_hover.png";
 	
+	// EDITOR
+	public final static String TEXT_AREA_ID = "code";
+	
+	//TOOLBAR
+	public final static String TOOLBAR_HEIGHT = "30px";
+	public final static String TOOLBAR_WIDTH = "100%";
 }

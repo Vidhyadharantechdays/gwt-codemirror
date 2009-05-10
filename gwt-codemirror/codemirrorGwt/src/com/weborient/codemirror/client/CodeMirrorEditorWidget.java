@@ -33,7 +33,7 @@ public class CodeMirrorEditorWidget extends Composite implements Constants {
 		panel.setWidth(configuration.getWidth());
 		panel.setStyleName("codemirror-ed");
 		textArea = new TextArea();
-		DOM.setElementAttribute(textArea.getElement(), "id", "code");
+		DOM.setElementAttribute(textArea.getElement(), "id", TEXT_AREA_ID);
 		panel.add(getToolbar());
 		panel.add(textArea);
 		initWidget(panel);
@@ -42,8 +42,8 @@ public class CodeMirrorEditorWidget extends Composite implements Constants {
 	private HorizontalPanel getToolbar() {
 		toolbar = new HorizontalPanel();
 		toolbar.setStyleName("html-editor-toolbar");
-		toolbar.setWidth("100%");
-		toolbar.setHeight("30px");
+		toolbar.setWidth(TOOLBAR_WIDTH);
+		toolbar.setHeight(TOOLBAR_WIDTH);
 		
 		return toolbar;
 	}

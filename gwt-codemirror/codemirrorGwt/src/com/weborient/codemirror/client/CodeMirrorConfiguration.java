@@ -34,7 +34,7 @@ public class CodeMirrorConfiguration {
 
 	/**
 	 * @return boolean 
-	 * This method returns the current readonly state of the editor if is set the default is false
+	 * This method returns the current readonly state of the editor. default is false
 	 */
 	public boolean isReadOnly() {
 		return readOnly;
@@ -50,7 +50,7 @@ public class CodeMirrorConfiguration {
 	
 	/**
 	 * @return int 
-	 * the time that the editor checks for the changes if is set the default is 1000
+	 * the time that the editor checks for the changes. the default is 1000
 	 */
 	public int getContinuousScanning() {
 		return continuousScanning;
