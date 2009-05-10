@@ -1,6 +1,7 @@
 <project name="codemirror">
 	<target name="mirror-lib" description="codemirror">
-		<jar destfile="build/codemirror-BETA.jar">
+		<mkdir dir="build"/>
+		<jar destfile="build/codemirror-V0.2.jar">
 			<fileset dir="bin">
 				<include name="com/**/*"/>
 			</fileset>

@@ -1,40 +1,73 @@
 package com.weborient.codemirror.client;
 
+/**
+ * @author samangiahi
+ *
+ */
 public class CodeMirrorConfiguration {
 	
-	private String height;
-	private String width;
+	private String height = "350px";
+	private String width = "100%";
 	private boolean readOnly = false;
-	private int continuousScanning;
+	private int continuousScanning = 1000;
 	private boolean lineNumbers = true;
-	private boolean textWrapping;
-	private String styleUrl;
+	private boolean textWrapping = false;
+	private String styleUrl = "css/xmlcolors.css";
 	private String[] listBoxPreInsert;
-	
+
+	/**
+	 * @return String 
+	 * This method returns the current height of the editor if is set. The default is 350px
+	 */
 	public String getHeight() {
 		return height;
 	}
 
+	/**
+	 * @param height
+	 * This method sets the height of the editor
+	 */
 	public void setHeight(String height) {
 		this.height = height;
 	}
 
+	/**
+	 * @return boolean 
+	 * This method returns the current readonly state of the editor if is set the default is false
+	 */
 	public boolean isReadOnly() {
 		return readOnly;
 	}
-
+	
+	/**
+	 * @param readOnly
+	 * This method sets disables the editor and make it for read only perposes
+	 */
 	public void setReadOnly(boolean readOnly) {
 		this.readOnly = readOnly;
 	}
-
+	
+	/**
+	 * @return int 
+	 * the time that the editor checks for the changes if is set the default is 1000
+	 */
 	public int getContinuousScanning() {
 		return continuousScanning;
 	}
 
+	/**
+	 * @param continuousScanning
+	 * sets the time the editor checks for the changes
+	 */
 	public void setContinuousScanning(int continuousScanning) {
 		this.continuousScanning = continuousScanning;
 	}
 
+	
+	/**
+	 * @return boolean 
+	 * 
+	 */
 	public boolean isLineNumbers() {
 		return lineNumbers;
 	}
@@ -74,7 +107,7 @@ public class CodeMirrorConfiguration {
 	public void setListBoxPreInsert(String[] listBoxPreInsert, String... o) {
 		this.listBoxPreInsert = listBoxPreInsert;
 	}
-	
+
 	public void setListBoxPreInsert(String... listBoxPreInsert) {
 		this.listBoxPreInsert = listBoxPreInsert;
 	}
