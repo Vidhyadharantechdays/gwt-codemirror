@@ -5,8 +5,6 @@ import com.google.gwt.core.client.JavaScriptObject;
 public class CodeMirrorJSNI {
 	private JavaScriptObject editorObject;
 
-	
-
 	public CodeMirrorJSNI() {
 		this(new CodeMirrorConfiguration());
 	}
@@ -33,7 +31,8 @@ public class CodeMirrorJSNI {
 	                lineNumbers: ln,
 	                readOnly: ro,
 	                textWrapping: tr,
-	                tabMode: "spaces"
+	                tabMode: "spaces",
+	                content: ' '
 	              });
 	              
 	              return editor;
@@ -52,18 +51,24 @@ public class CodeMirrorJSNI {
 	     }-*/;
 
 	public native void undoEditor()/*-{
-	             var ed = this.@com.weborient.codemirror.client.CodeMirrorJSNI::editorObject;
-	             ed.undo();
-	     }-*/;
+			if (this.@com.weborient.codemirror.client.CodeMirrorJSNI::getEditorCode()() != ' ') {
+		         var ed = this.@com.weborient.codemirror.client.CodeMirrorJSNI::editorObject;
+		         ed.undo();
+			}
+	}-*/;
 
 	public native void redoEditor()/*-{
+			if (this.@com.weborient.codemirror.client.CodeMirrorJSNI::getEditorCode()() != ' ') {
 	             var ed = this.@com.weborient.codemirror.client.CodeMirrorJSNI::editorObject;
 	             ed.redo();
-	     }-*/;
+			}
+     }-*/;
 
 	public native void reindentEditor()/*-{
+			if (this.@com.weborient.codemirror.client.CodeMirrorJSNI::getEditorCode()() != ' ') {
 	             var ed = this.@com.weborient.codemirror.client.CodeMirrorJSNI::editorObject;
 	             ed.reindent();
+			}
 	     }-*/;
 
 	public native void replaceText(String text)/*-{

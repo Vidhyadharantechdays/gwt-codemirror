@@ -1,5 +1,6 @@
 package com.weborient.codemirror.client;
 
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.ui.ClickListener;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Image;
@@ -23,7 +24,11 @@ public class CodeMirrorToolbarPanel extends HorizontalPanel implements Constants
 		undoButton.addClickListener(new ClickListener() {
 
 			public void onClick(Widget w) {
-				widget.getCodeMirrorJSNI().undoEditor();
+				if(widget.getText() != null && !widget.getText().equals("")) {
+					
+					GWT.log("clicked. test: " + widget.getText(), null);
+					widget.getCodeMirrorJSNI().undoEditor();
+				}
 			}
 		});
 
@@ -57,13 +62,13 @@ public class CodeMirrorToolbarPanel extends HorizontalPanel implements Constants
 	private void prepareCodeTemplateListBox() {
 		if (widget.getConfiguration() != null
 				&& widget.getConfiguration() != null
-				&& widget.getConfiguration().getListBoxPreInsert().length > 0) {
+				&& widget.getConfiguration().getListBoxPreSets().length > 0) {
 			
 			HorizontalPanel templateSelectorPanel = new HorizontalPanel();
 			
 			templateSelectorPanel.setStyleName("templateSelectorPanel");
 			
-			Label label = new Label("Templates: ");
+			Label label = new Label(widget.getConfiguration().getTagSelectorLabel());
 			templateSelectorPanel.add(label);
 			
 			CodeMirrorListBox listBox = new CodeMirrorListBox(widget);

@@ -11,12 +11,12 @@ public class CodeMirrorListBox extends ListBox implements ChangeListener {
 	public CodeMirrorListBox(CodeMirrorEditorWidget widget) {
 		this.widget = widget;
 		if (widget.getConfiguration() != null
-				&& widget.getConfiguration().getListBoxPreInsert() != null
-				&& widget.getConfiguration().getListBoxPreInsert().length > 0) {
+				&& widget.getConfiguration().getListBoxPreSets() != null
+				&& widget.getConfiguration().getListBoxPreSets().length > 0) {
 			GWT.log("is not null", null);
 			addItem("");
 			for (String preCode : widget.getConfiguration()
-					.getListBoxPreInsert()) {
+					.getListBoxPreSets()) {
 				addItem(preCode);
 			}
 			setVisibleItemCount(1);
