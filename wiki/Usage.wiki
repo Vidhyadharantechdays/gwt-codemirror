@@ -2,7 +2,9 @@
 
 1. Download the last version of codemirror-vx.x.jar
 
-2. Inherit the following in your <b>project.gwt.xml</b>
+2. Include the jar in WEB-INF/lib directory of your project
+
+3. Inherit the following in your <b>project-name.gwt.xml</b>
 
 <code>
 <inherits name='com.weborient.codemirror.client.CodeMirrorEditorWidget'/>
