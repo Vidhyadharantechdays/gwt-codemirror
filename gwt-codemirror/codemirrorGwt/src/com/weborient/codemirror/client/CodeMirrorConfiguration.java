@@ -63,16 +63,21 @@ public class CodeMirrorConfiguration {
 	public void setContinuousScanning(int continuousScanning) {
 		this.continuousScanning = continuousScanning;
 	}
-
 	
 	/**
 	 * @return boolean 
-	 * 
+	 * The current state of the line number.
 	 */
 	public boolean isLineNumbers() {
 		return lineNumbers;
 	}
 
+	
+	/**
+	 * @param lineNumbers
+	 * Set the current state of the line number. 
+	 * true for visible and false for invisible
+	 */ 
 	public void setLineNumbers(boolean lineNumbers) {
 		this.lineNumbers = lineNumbers;
 	}
