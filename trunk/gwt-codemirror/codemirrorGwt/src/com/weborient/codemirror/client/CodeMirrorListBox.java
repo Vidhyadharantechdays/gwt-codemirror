@@ -17,7 +17,7 @@ public class CodeMirrorListBox extends ListBox implements ChangeListener {
 		if (widget.getConfiguration() != null
 				&& widget.getConfiguration().getListBoxPreSets() != null
 				&& widget.getConfiguration().getListBoxPreSets().length > 0) {
-			GWT.log("is not null", null);
+
 			addItem("");
 			for (String preCode : widget.getConfiguration()
 					.getListBoxPreSets()) {
