@@ -1,5 +1,9 @@
 package com.weborient.codemirror.client;
 
+/**
+ * @author samangiahi
+ *
+ */
 public interface Constants {
 	public final static String TOOLBAR_UNDO_BUTTON_ICON = "images/toolbar_undo_button.png"; 
 	public final static String UNDO_BUTTON_HOVER_ICON = "images/undo_button_hover.png";

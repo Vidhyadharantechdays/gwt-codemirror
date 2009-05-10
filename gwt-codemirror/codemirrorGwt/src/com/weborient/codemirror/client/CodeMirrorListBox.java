@@ -5,6 +5,10 @@ import com.google.gwt.user.client.ui.ChangeListener;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.Widget;
 
+/**
+ * @author samangiahi
+ *
+ */
 public class CodeMirrorListBox extends ListBox implements ChangeListener {
 	CodeMirrorEditorWidget widget;
 

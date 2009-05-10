@@ -2,6 +2,10 @@ package com.weborient.codemirror.client;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
+/**
+ * @author samangiahi
+ *
+ */
 public class CodeMirrorJSNI {
 	private JavaScriptObject editorObject;
 
