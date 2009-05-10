@@ -3,6 +3,10 @@ package com.weborient.codemirror.client;
 import com.google.gwt.user.client.ui.MouseListener;
 import com.google.gwt.user.client.ui.Widget;
 
+/**
+ * @author samangiahi
+ *
+ */
 public abstract class AbstractIconMouseListener implements MouseListener {
 
 	public abstract void onMouseOver(Widget sender);

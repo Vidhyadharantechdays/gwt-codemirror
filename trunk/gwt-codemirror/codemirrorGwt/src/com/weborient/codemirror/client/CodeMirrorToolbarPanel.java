@@ -7,6 +7,10 @@ import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.Widget;
 
+/**
+ * @author samangiahi
+ *
+ */
 public class CodeMirrorToolbarPanel extends HorizontalPanel implements Constants{
 	
 	CodeMirrorEditorWidget widget;

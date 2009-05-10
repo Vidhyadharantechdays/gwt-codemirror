@@ -6,6 +6,10 @@ import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.client.ui.VerticalPanel;
 
+/**
+ * @author samangiahi
+ *
+ */
 public class CodeMirrorEditorWidget extends Composite implements Constants {
 	
 	TextArea textArea;
