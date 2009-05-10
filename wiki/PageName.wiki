@@ -1,0 +1,40 @@
+#summary One-sentence summary of this page.
+
+= Installation =
+
+1. Download the last version of codemirror-vx.x.jar
+
+2. Inherit the following in your <b>project.gwt.xml</b>
+
+<code>
+<inherits name='com.weborient.codemirror.client.CodeMirrorEditorWidget'/>
+
+</code> 
+
+
+= How To Use? =
+
+
+
+
+<code>
+public class CodemirrorGwt implements EntryPoint {
+
+
+	public void onModuleLoad() {
+		
+             // user the configuration class in order 
+             // to override the default widget configuraions
+
+              CodeMirrorConfiguration configuration = new CodeMirrorConfiguration();
+	      configuration.setTagSelectorLabel("Temlates: ");
+             configuration.setListBoxPreSets("<html></html>", "<div></div>");
+        
+             // pass the configuration object to the widget
+
+              CodeMirrorEditorWidget widget = new CodeMirrorEditorWidget(configuration);
+        
+             RootPanel.get().add(widget);
+	}
+ }
+</code>
