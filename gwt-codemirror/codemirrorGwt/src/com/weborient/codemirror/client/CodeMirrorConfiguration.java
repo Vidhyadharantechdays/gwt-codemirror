@@ -13,7 +13,8 @@ public class CodeMirrorConfiguration {
 	private boolean lineNumbers = true;
 	private boolean textWrapping = false;
 	private String styleUrl = "css/xmlcolors.css";
-	private String[] listBoxPreInsert;
+	private String[] listBoxPreSets;
+	private String tagSelectorLabel;
 
 	/**
 	 * @return String 
@@ -100,15 +101,23 @@ public class CodeMirrorConfiguration {
 		this.styleUrl = styleUrl;
 	}
 
-	public String[] getListBoxPreInsert() {
-		return listBoxPreInsert;
+	public String[] getListBoxPreSets() {
+		return listBoxPreSets;
 	}
 
 	public void setListBoxPreInsert(String[] listBoxPreInsert, String... o) {
-		this.listBoxPreInsert = listBoxPreInsert;
+		this.listBoxPreSets = listBoxPreInsert;
 	}
 
-	public void setListBoxPreInsert(String... listBoxPreInsert) {
-		this.listBoxPreInsert = listBoxPreInsert;
+	public void setListBoxPreSets(String... listBoxPreInsert) {
+		this.listBoxPreSets = listBoxPreInsert;
+	}
+
+	public String getTagSelectorLabel() {
+		return tagSelectorLabel;
+	}
+
+	public void setTagSelectorLabel(String tagSelectorLabel) {
+		this.tagSelectorLabel = tagSelectorLabel;
 	}
 }

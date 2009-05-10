@@ -14,7 +14,11 @@ public class CodemirrorGwt implements EntryPoint {
 	public void onModuleLoad() {
 		
 		CodeMirrorConfiguration configuration = new CodeMirrorConfiguration();
-        configuration.setListBoxPreInsert(new String[] {"<div></div>", "<html></html>"});
-        RootPanel.get().add(new CodeMirrorEditorWidget(configuration));
+		configuration.setTagSelectorLabel("Temlates: ");
+        configuration.setListBoxPreSets("<html></html>", "<div></div>");
+        
+        CodeMirrorEditorWidget widget = new CodeMirrorEditorWidget(configuration);
+        
+        RootPanel.get().add(widget);
 	}
 }
