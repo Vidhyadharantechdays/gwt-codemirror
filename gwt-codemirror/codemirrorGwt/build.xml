@@ -1,10 +1,21 @@
 <project name="codemirror" default="mirror-lib">
 	<target name="mirror-lib" description="codemirror">
-		<mkdir dir="build"/>
-		<jar destfile="build/codemirror-V0.2.jar">
+		<delete dir="dist"/>
+        <mkdir dir="dist"/>
+		<jar destfile="dist/codemirror_V-0.2.jar">
 			<fileset dir="bin">
+				<exclude name="com/weborient/codemirror/CodemirrorGwt.*"/>
+				<exclude name="com/weborient/codemirror/client/CodemirrorGwt.*"/>
 				<include name="com/**/*"/>
 			</fileset>
+			<fileset dir="src">
+				<exclude name="com/weborient/codemirror/CodemirrorGwt.*"/>
+				<exclude name="com/weborient/codemirror/client/CodemirrorGwt.*"/>
+				<include name="com/weborient/codemirror/client/**/*"/>
+			</fileset>
+			<fileset dir="build" >
+                <include name="**/*"/>
+            </fileset>
 		</jar>
 	</target>
 </project>
