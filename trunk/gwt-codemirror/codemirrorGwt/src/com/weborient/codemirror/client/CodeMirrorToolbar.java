@@ -73,6 +73,7 @@ public class CodeMirrorToolbar extends HorizontalPanel implements Constants{
 			templateSelectorPanel.setStyleName("templateSelectorPanel");
 			
 			Label label = new Label(widget.getConfiguration().getTagSelectorLabel());
+			label.setStyleName("template-label");
 			templateSelectorPanel.add(label);
 			
 			CodeMirrorListBox listBox = new CodeMirrorListBox(widget);
