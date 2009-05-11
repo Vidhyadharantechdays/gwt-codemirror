@@ -65,7 +65,7 @@ public class CodeMirrorToolbar extends HorizontalPanel implements Constants{
 
 	private void prepareCodeTemplateListBox() {
 		if (widget.getConfiguration() != null
-				&& widget.getConfiguration() != null
+				&& widget.getConfiguration() != null && widget.getConfiguration().getListBoxPreSets() != null
 				&& widget.getConfiguration().getListBoxPreSets().length > 0) {
 			
 			HorizontalPanel templateSelectorPanel = new HorizontalPanel();

@@ -18,8 +18,7 @@ public class CodeMirrorEditorWidget extends Composite implements Constants {
 	HorizontalPanel toolbar;
 
 	public CodeMirrorEditorWidget() {
-		super();
-		initWidget();
+		this(new CodeMirrorConfiguration());
 	}
 
 	public CodeMirrorEditorWidget(CodeMirrorConfiguration configuration) {
