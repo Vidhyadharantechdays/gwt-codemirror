@@ -8,7 +8,7 @@
 3. Inherit the following in your <b>project-name.gwt.xml</b>
 
 <code>
-<inherits name='com.weborient.codemirror.client.CodeMirrorEditorWidget'/>
+<inherits name="com.weborient.codemirror.CodemirrorGwt"/>
 
 </code> 
 
