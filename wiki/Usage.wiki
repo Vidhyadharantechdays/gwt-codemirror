@@ -24,7 +24,7 @@ public class CodemirrorGwt implements EntryPoint {
 
 	public void onModuleLoad() {
 		
-             // user the configuration class in order 
+             // use the configuration class in order 
              // to override the default widget configuraions
 
               CodeMirrorConfiguration configuration = new CodeMirrorConfiguration();
