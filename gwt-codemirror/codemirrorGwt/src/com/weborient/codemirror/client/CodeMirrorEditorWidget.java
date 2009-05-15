@@ -32,7 +32,7 @@ public class CodeMirrorEditorWidget extends Composite implements Constants {
 		panel.setWidth(configuration.getWidth());
 		panel.setStyleName("codemirror-ed");
 		textArea = new TextArea();
-		DOM.setElementAttribute(textArea.getElement(), "id", TEXT_AREA_ID);
+		DOM.setElementAttribute(textArea.getElement(), "id", configuration.getId());
 		panel.add(getToolbar());
 		panel.add(textArea);
 		initWidget(panel);

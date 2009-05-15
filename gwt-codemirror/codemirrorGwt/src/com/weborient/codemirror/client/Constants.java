@@ -16,9 +16,6 @@ public interface Constants {
 	public final static String TOOLBAR_REDO_BUTTON_ICON = "images/toolbar_redo_button.png";
 	public final static String REDO_BUTTON_HOVER_ICON = "images/redo_button_hover.png";
 	
-	// EDITOR
-	public final static String TEXT_AREA_ID = "code";
-	
 	//TOOLBAR
 	public final static String TOOLBAR_HEIGHT = "30px";
 	public final static String TOOLBAR_WIDTH = "100%";
