@@ -1,7 +1,7 @@
 #labels Tutorial
 = Installation =
 
-1. Download the last version of codemirror-vx.x.jar
+1. Download the last version of codemirror-vx.x.jar (if you are using GWT 1.6, download the codemirror_V-0.4-gwt16.jar) 
 
 2. Include the jar in WEB-INF/lib directory of your project
 
