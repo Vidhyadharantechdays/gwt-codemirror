@@ -7,10 +7,9 @@
 
 3. Inherit the following in your <b>project-name.gwt.xml</b>
 
-<code>
+{{{
 <inherits name="com.weborient.codemirror.CodemirrorGwt"/>
-
-</code> 
+}}}
 
 
 = How To Use? =
@@ -18,7 +17,7 @@
 
 
 
-<code>
+{{{
 public class CodemirrorGwt implements EntryPoint {
 
 
@@ -49,4 +48,4 @@ public class CodemirrorGwt implements EntryPoint {
              RootPanel.get().add(widget);
 	}
  }
-</code>
+}}}
