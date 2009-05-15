@@ -30,5 +30,6 @@ public class CodemirrorGwt implements EntryPoint {
         
         RootPanel.get().add(widget1);
         RootPanel.get().add(widget2);
+        widget2.setText("oooo");
 	}
 }

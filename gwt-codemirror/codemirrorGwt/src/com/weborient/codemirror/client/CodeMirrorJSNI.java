@@ -1,5 +1,6 @@
 package com.weborient.codemirror.client;
 
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
@@ -8,7 +9,7 @@ import com.google.gwt.core.client.JavaScriptObject;
  */
 public class CodeMirrorJSNI {
 	private JavaScriptObject editorObject;
-
+	private String jsDirectory = GWT.getModuleBaseURL() + "js/";
 	public CodeMirrorJSNI() {
 		this(new CodeMirrorConfiguration());
 	}
@@ -31,7 +32,7 @@ public class CodeMirrorJSNI {
 	                height:             h,
 	                parserfile: "parsexml.js",
 	                stylesheet: su,
-	                path: "js/",
+	                path: this.@com.weborient.codemirror.client.CodeMirrorJSNI::jsDirectory,
 	                continuousScanning: cs,
 	                lineNumbers: ln,
 	                readOnly: ro,
