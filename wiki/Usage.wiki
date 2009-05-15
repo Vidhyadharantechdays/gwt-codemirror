@@ -34,15 +34,6 @@ public class CodemirrorGwt implements EntryPoint {
 
               CodeMirrorEditorWidget widget = new CodeMirrorEditorWidget(configuration);
 
-             // set the editor text
-
-             widget.setText("some text");
-
-
-
-             // get the editor text
-
-             widget.getText();
 
 
              RootPanel.get().add(widget);
