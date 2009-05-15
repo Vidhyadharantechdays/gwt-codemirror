@@ -64,10 +64,8 @@ public class CodeMirrorJSNI {
 	}-*/;
 
 	public native void redoEditor()/*-{
-			if (this.@com.weborient.codemirror.client.CodeMirrorJSNI::getEditorCode()() != ' ') {
 	             var ed = this.@com.weborient.codemirror.client.CodeMirrorJSNI::editorObject;
 	             ed.redo();
-			}
      }-*/;
 
 	public native void reindentEditor()/*-{
