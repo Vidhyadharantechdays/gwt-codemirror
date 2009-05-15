@@ -26,17 +26,25 @@ public class CodemirrorGwt implements EntryPoint {
              // use the configuration class in order 
              // to override the default widget configuraions
 
-              CodeMirrorConfiguration configuration = new CodeMirrorConfiguration();
-	      configuration.setTagSelectorLabel("Temlates: ");
+             CodeMirrorConfiguration configuration = new CodeMirrorConfiguration();
+	     configuration.setTagSelectorLabel("Temlates: ");
              configuration.setListBoxPreSets("<html></html>", "<div></div>");
         
              // pass the configuration object to the widget
 
-              CodeMirrorEditorWidget widget = new CodeMirrorEditorWidget(configuration);
+             CodeMirrorEditorWidget widget = new CodeMirrorEditorWidget(configuration);
 
 
 
              RootPanel.get().add(widget);
+
+             // these to methods should be called after the widget has been added
+             // other wise you'll get an error
+
+             widget.setText("some text");
+
+             String text = widget.getText();
+
 	}
  }
 }}}
