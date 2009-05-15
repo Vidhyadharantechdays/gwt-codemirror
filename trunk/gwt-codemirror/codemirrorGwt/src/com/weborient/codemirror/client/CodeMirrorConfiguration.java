@@ -1,11 +1,13 @@
 package com.weborient.codemirror.client;
 
+
 /**
  * @author samangiahi
  *
  */
 public class CodeMirrorConfiguration {
 	
+	public String id = String.valueOf(this.hashCode());
 	private String height = "350px";
 	private String width = "100%";
 	private boolean readOnly = false;
@@ -124,5 +126,13 @@ public class CodeMirrorConfiguration {
 
 	public void setTagSelectorLabel(String tagSelectorLabel) {
 		this.tagSelectorLabel = tagSelectorLabel;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 }

@@ -19,6 +19,7 @@ public class CodeMirrorJSNI {
 
 	public native JavaScriptObject initCodeMirror(CodeMirrorConfiguration conf) /*-{
 	            
+	            var id = conf.@com.weborient.codemirror.client.CodeMirrorConfiguration::getId()();
 	            var h = conf.@com.weborient.codemirror.client.CodeMirrorConfiguration::getHeight()();
 	            var ro = conf.@com.weborient.codemirror.client.CodeMirrorConfiguration::isReadOnly()();
 	            var cs = conf.@com.weborient.codemirror.client.CodeMirrorConfiguration::getContinuousScanning()();
@@ -26,7 +27,7 @@ public class CodeMirrorJSNI {
 	            var tr = conf.@com.weborient.codemirror.client.CodeMirrorConfiguration::isTextWrapping()();
 	            var su = conf.@com.weborient.codemirror.client.CodeMirrorConfiguration::getStyleUrl()();
 
-	            var editor = $wnd.CodeMirror.fromTextArea(@com.weborient.codemirror.client.Constants::TEXT_AREA_ID, {
+	            var editor = $wnd.CodeMirror.fromTextArea(id, {
 	                height:             h,
 	                parserfile: "parsexml.js",
 	                stylesheet: su,
