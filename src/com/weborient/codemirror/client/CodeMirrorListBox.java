@@ -1,6 +1,8 @@
 package com.weborient.codemirror.client;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ChangeEvent;
+import com.google.gwt.event.dom.client.ChangeHandler;
 import com.google.gwt.user.client.ui.ChangeListener;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.Widget;
@@ -9,7 +11,7 @@ import com.google.gwt.user.client.ui.Widget;
  * @author samangiahi
  *
  */
-public class CodeMirrorListBox extends ListBox implements ChangeListener {
+public class CodeMirrorListBox extends ListBox implements ChangeHandler {
 	CodeMirrorEditorWidget widget;
 
 	public CodeMirrorListBox(CodeMirrorEditorWidget widget) {
@@ -24,12 +26,13 @@ public class CodeMirrorListBox extends ListBox implements ChangeListener {
 				addItem(preCode);
 			}
 			setVisibleItemCount(1);
-			addChangeListener(this);
+			addChangeHandler(this);
 			this.setStyleName("listBox");
+			
 		}
 	}
 
-	public void onChange(Widget w) {
+	public void onChange(ChangeEvent event) {
 		String value = getValue(getSelectedIndex());
 		GWT.log("list box value: " + value, null);
 		if (value != null && !value.equals("")) {

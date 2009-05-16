@@ -1,6 +1,12 @@
 package com.weborient.codemirror.client;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.dom.client.MouseOutEvent;
+import com.google.gwt.event.dom.client.MouseOutHandler;
+import com.google.gwt.event.dom.client.MouseOverEvent;
+import com.google.gwt.event.dom.client.MouseOverHandler;
 import com.google.gwt.user.client.ui.ClickListener;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Image;
@@ -25,9 +31,9 @@ public class CodeMirrorToolbar extends HorizontalPanel implements Constants{
 
 	private void prepareButtons() {
 		Image undoButton = new Image(TOOLBAR_UNDO_BUTTON_ICON);
-		undoButton.addClickListener(new ClickListener() {
+		undoButton.addClickHandler(new ClickHandler() {
 
-			public void onClick(Widget w) {
+			public void onClick(ClickEvent e) {
 				if(widget.getText() != null && !widget.getText().equals("")) {
 					
 					GWT.log("clicked. test: " + widget.getText(), null);
@@ -40,9 +46,9 @@ public class CodeMirrorToolbar extends HorizontalPanel implements Constants{
 		add(undoButton);
 
 		Image redoButton = new Image(TOOLBAR_REDO_BUTTON_ICON);
-		redoButton.addClickListener(new ClickListener() {
+		redoButton.addClickHandler(new ClickHandler() {
 
-			public void onClick(Widget w) {
+			public void onClick(ClickEvent e) {
 				widget.getCodeMirrorJSNI().redoEditor();
 			}
 		});
@@ -51,9 +57,9 @@ public class CodeMirrorToolbar extends HorizontalPanel implements Constants{
 		add(redoButton);
 
 		Image refreshButton = new Image(TOOLBAR_REFRESH_BUTTON_ICON);
-		refreshButton.addClickListener(new ClickListener() {
+		refreshButton.addClickHandler(new ClickHandler() {
 
-			public void onClick(Widget w) {
+			public void onClick(ClickEvent e) {
 				widget.getCodeMirrorJSNI().reindentEditor();
 			}
 		});
@@ -84,42 +90,48 @@ public class CodeMirrorToolbar extends HorizontalPanel implements Constants{
 	}
 	
 	private void prepareRefreshButtonHover(final Image redoButton) {
-		redoButton.addMouseListener(new AbstractIconMouseListener() {
-
-			public void onMouseOver(Widget w) {
-				redoButton.setUrl(REFRESH_BUTTON_HOVER_ICON);
-			}
-
-			public void onMouseOut(Widget w) {
+		redoButton.addMouseOutHandler(new MouseOutHandler(){
+			public void onMouseOut(MouseOutEvent event) {
 				redoButton.setUrl(TOOLBAR_REFRESH_BUTTON_ICON);
 			}
-
+		});
+		redoButton.addMouseOverHandler(new MouseOverHandler(){
+			public void onMouseOver(MouseOverEvent event) {
+				redoButton.setUrl(REFRESH_BUTTON_HOVER_ICON);
+				
+			}
 		});
 	}
 
 	private void prepareRedoButtonHover(final Image redoButton) {
-		redoButton.addMouseListener(new AbstractIconMouseListener() {
-
-			public void onMouseOver(Widget w) {
+		redoButton.addMouseOverHandler(new MouseOverHandler(){
+			public void onMouseOver(MouseOverEvent event) {
 				redoButton.setUrl(REDO_BUTTON_HOVER_ICON);
 			}
 
-			public void onMouseOut(Widget w) {
+		});
+		
+		redoButton.addMouseOutHandler(new MouseOutHandler(){
+			public void onMouseOut(MouseOutEvent event) {
 				redoButton.setUrl(TOOLBAR_REDO_BUTTON_ICON);
+				
 			}
 		});
 	}
 
 	private void prepareUndoButtonHover(final Image undoButton) {
-		undoButton.addMouseListener(new AbstractIconMouseListener() {
-
-			public void onMouseOver(Widget w) {
+		undoButton.addMouseOverHandler(new MouseOverHandler(){
+			public void onMouseOver(MouseOverEvent event) {
 				undoButton.setUrl(UNDO_BUTTON_HOVER_ICON);
 			}
 
-			public void onMouseOut(Widget w) {
+		});
+		undoButton.addMouseOutHandler(new MouseOutHandler(){
+			public void onMouseOut(MouseOutEvent event) {
 				undoButton.setUrl(TOOLBAR_UNDO_BUTTON_ICON);
+				
 			}
 		});
+		
 	}
 }

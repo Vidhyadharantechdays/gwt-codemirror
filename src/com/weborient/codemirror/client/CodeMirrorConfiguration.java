@@ -1,12 +1,5 @@
 package com.weborient.codemirror.client;
 
-import com.google.gwt.core.client.GWT;
-
-
-/**
- * @author samangiahi
- *
- */
 public class CodeMirrorConfiguration {
 	
 	public String id = String.valueOf(this.hashCode());
@@ -16,7 +9,7 @@ public class CodeMirrorConfiguration {
 	private int continuousScanning = 1000;
 	private boolean lineNumbers = true;
 	private boolean textWrapping = false;
-	private String styleUrl = GWT.getModuleBaseURL() + "css/xmlcolors.css";
+	private String styleUrl =  "../css/xmlcolors.css";
 	private String[] listBoxPreSets;
 	private String tagSelectorLabel;
 
