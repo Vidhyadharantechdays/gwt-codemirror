@@ -1,2 +1,0 @@
-version 0.2
-- fixed usage of multiple editors in one page useing the hashcode of the configuration object as the javascript editor id. You can change the id of a configuration with the appropriate setter method
